@@ -2,15 +2,16 @@ import React from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import Home from './components/home.tsx/Home';
+import About from './components/About/About';
 
-const App = ()=>{
-  return(
+const App = () => {
+  return (
     <>
-    <Header/>
-    <main className='main'>
-      <Home/>
-    </main>
-
+      <Header />
+      <main className='main'>
+        <Home />
+        <About />
+      </main>
     </>
   )
 }

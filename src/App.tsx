@@ -7,21 +7,27 @@ import Skills from './components/skills/Skills';
 import Qualification from './components/qualification/Qualification';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
+import ScrollUp from './components/scrollUp/ScrollUp';
 
 
 const App = () => {
   return (
     <>
+
       <Header />
+      
       <main className='main'>
         <Home />
         <About />
-        <Skills/>
-        <Qualification/>
-        <Contact/>
-        <Footer/>
-        
+        <Skills />
+        <Qualification />
+        <Contact />
+
       </main>
+
+      <Footer />
+      <ScrollUp />
+
     </>
   )
 }

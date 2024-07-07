@@ -6,6 +6,8 @@ import About from './components/About/About';
 import Skills from './components/skills/Skills';
 import Qualification from './components/qualification/Qualification';
 import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
+
 
 const App = () => {
   return (
@@ -17,6 +19,7 @@ const App = () => {
         <Skills/>
         <Qualification/>
         <Contact/>
+        <Footer/>
         
       </main>
     </>

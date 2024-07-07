@@ -4,24 +4,24 @@ import './contact.css'
 
 const Contact = () => {
     const form = useRef<HTMLFormElement>(null);
-  
+
     const sendEmail = (e: React.FormEvent) => {
-      e.preventDefault();
-  
-      if (form.current) {
-        emailjs
-          .sendForm('service_8g0i3fg', 'template_55foptz', form.current, 'nUFIFz2hUY3hxLdJ1')
-          .then(
-            () => {
-              console.log('SUCCESS!');
-            },
-            (error: { text: string }) => {
-              console.log('FAILED...', error.text);
-            }
-          );
-  
-          form.current.reset(); // This will reset the form
-      }
+        e.preventDefault();
+
+        if (form.current) {
+            emailjs
+                .sendForm('service_8g0i3fg', 'template_55foptz', form.current, 'nUFIFz2hUY3hxLdJ1')
+                .then(
+                    () => {
+                        console.log('SUCCESS!');
+                    },
+                    (error: { text: string }) => {
+                        console.log('FAILED...', error.text);
+                    }
+                );
+
+            form.current.reset(); // This will reset the form
+        }
     };
     return (
         <section className="contact section" id="contact">
@@ -37,10 +37,11 @@ const Contact = () => {
                             <i className="bx bx-mail-send contact__card-icon"></i>
                             <h3 className="contact__card-title">Email</h3>
                             <span className="contact__card-data">ashwin.biju.k@gmail.com</span>
-                            <a href="mailto:ashwin.biju.k@gmail.com" className="contact__button">Write me <i
-                                className="bx bx-right-arrow-alt contact__button-icon"
-                            ></i></a>
+                            <a href="mailto:ashwin.biju.k@gmail.com" className="contact__button">
+                                Write me <i className="bx bx-right-arrow-alt contact__button-icon"></i>
+                            </a>
                         </div>
+
 
                         <div className="contact__card">
                             <i className="bx bxl-whatsapp contact__card-icon"></i>
@@ -56,7 +57,7 @@ const Contact = () => {
 
                 <div className="contact__content">
                     <h3 className="contact__title">Write me your project</h3>
-                    <form  ref={form} onSubmit={sendEmail} className="contact__form">
+                    <form ref={form} onSubmit={sendEmail} className="contact__form">
 
                         <div className="contact__form-div">
                             <label htmlFor="" className="contact__form-tag">Name</label>
